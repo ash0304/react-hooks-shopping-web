@@ -1,4 +1,4 @@
-import './CartPage.css';
+import './CartPage.scss';
 
 const CartPage = () => {
   return <div className="cartpage">CartPage</div>;
