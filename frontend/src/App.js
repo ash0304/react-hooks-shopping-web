@@ -18,11 +18,11 @@ function App() {
   return (
     <Router>
       {/* Navbar */}
-      <Navbar hamClick={() => setSideToggle(true)} />
+      <Navbar click={() => setSideToggle(true)} />
       {/* SideDrawer */}
-      <SideDrawer show={sideToggle} />
+      <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
       {/* Backdrop */}
-      <Backdrop show={sideToggle} backdropClick={() => setSideToggle(false)} />
+      <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
       <main>
         <Switch>
           <Route exact path="/" component={HomePage} />

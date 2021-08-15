@@ -1,8 +1,8 @@
 import './Backdrop.scss';
 
-const Backdrop = ({ show, backdropClick }) => {
+const Backdrop = ({ show, click }) => {
   return (
-    show && <div className="backdrop" onClick={backdropClick}></div>
+    show && <div className="backdrop" onClick={click}></div>
   );
 };
 
