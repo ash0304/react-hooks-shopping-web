@@ -1,7 +1,7 @@
 import './Navbar.scss';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({hamClick}) => {
   return (
     <nav className="navbar">
       {/* logo */}
@@ -27,7 +27,7 @@ const Navbar = () => {
       </ul>
 
       {/* hamburger menu */}
-      <div className="hamburger__menu">
+      <div className="hamburger__menu" onClick={hamClick}>
         <div></div>
         <div></div>
         <div></div>
