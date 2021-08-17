@@ -13,9 +13,11 @@ const Navbar = ({ click }) => {
   return (
     <nav className="navbar">
       {/* logo */}
-      <div className="navbar__logo">
-        <h2>Shopping Cart</h2>
-      </div>
+      <Link to="/">
+        <div className="navbar__logo">
+          <h2>Shopping Web</h2>
+        </div>
+      </Link>
 
       {/* links */}
       <ul className="navbar__links">
