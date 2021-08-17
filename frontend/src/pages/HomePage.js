@@ -23,13 +23,24 @@ const HomePage = () => {
       <h2 className="homepage__title">Latest Products</h2>
 
       <div className="homepage__products">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {loading ? (
+          <h2>Loading ...</h2>
+        ) : error ? (
+          <h2>{error}</h2>
+        ) : (
+          products.map((product) => {
+            return (
+              <Product
+                key={product._id}
+                productId={product._id}
+                imageUrl={product.imageUrl}
+                name={product.name}
+                price={product.price}
+                description={product.description}
+              />
+            );
+          })
+        )}
       </div>
     </div>
   );
