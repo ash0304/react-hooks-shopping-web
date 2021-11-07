@@ -1,7 +1,7 @@
 import * as actionTypes from '../constants/productConstants';
 import axios from 'axios';
 
-export const getProducts = () => async (dispatch) => {
+export const getProducts = (query) => async (dispatch) => {
   try {
     dispatch({
       type: actionTypes.GET_PRODUCTS_REQUEST,
@@ -11,7 +11,10 @@ export const getProducts = () => async (dispatch) => {
 
     dispatch({
       type: actionTypes.GET_PRODUCTS_SUCCESS,
-      payload: data,
+      payload: {
+        data,
+        query,
+      },
     });
   } catch (error) {
     dispatch({

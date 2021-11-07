@@ -8,9 +8,17 @@ export const getProductsReducer = (state = { products: [] }, action) => {
         products: [],
       };
     case actionTypes.GET_PRODUCTS_SUCCESS:
+      // add query check
       return {
         loading: false,
-        products: action.payload,
+        products: action.payload.query
+          ? action.payload.data.filter(
+              (x) =>
+                x.name
+                  .toLowerCase()
+                  .indexOf(action.payload.query.toLowerCase()) !== -1
+            )
+          : action.payload.data,
       };
     case actionTypes.GET_PRODUCTS_FAIL:
       return {

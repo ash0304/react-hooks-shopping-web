@@ -21,7 +21,7 @@
     li {
       display: flex;
       align-items: center;
-      a {
+      a, > div {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -56,6 +56,20 @@
             font-size: 1rem;
             margin-left: 8px;
           }
+        }
+        .siderdrawer__input {
+          border: 1px solid #171717;
+          border-radius: 8px;
+          height: 30px;
+          margin-right: 10px;
+        }
+        .siderdrawer__btn {
+          height: 30px;
+          background: white;
+          color: #171717;
+          border-radius: 8px;
+          padding: 0.2rem;
+          cursor: pointer;
         }
       }
     }

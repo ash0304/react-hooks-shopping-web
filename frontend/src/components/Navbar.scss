@@ -41,6 +41,26 @@
   }
 }
 
+.navbar__input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.navbar__btn {
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  border: none;
+  &:hover {
+    background: #dd219e;
+    color: #f4f4f4;
+  }
+}
+
 .cart__link {
   background-color: #333;
   padding: 10px;
