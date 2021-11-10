@@ -30,11 +30,7 @@ const Carousel = () => {
   const NextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: 'block', background: '#5f5f5f' }}
-        onClick={onClick}
-      ></div>
+      <div className={className} style={{ ...style }} onClick={onClick}></div>
     );
   };
 
@@ -42,11 +38,7 @@ const Carousel = () => {
   const PrevArrow = (props) => {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: 'block', background: '#5f5f5f' }}
-        onClick={onClick}
-      ></div>
+      <div className={className} style={{ ...style }} onClick={onClick}></div>
     );
   };
 

@@ -13,6 +13,7 @@ import PromotionDetailPage from './pages/PromotionDetailPage';
 import Navbar from './components/Navbar';
 import Backdrop from './components/Backdrop';
 import SideDrawer from './components/SideDrawer';
+import Footer from './components/Footer';
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
@@ -25,15 +26,21 @@ function App() {
       <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
       {/* Backdrop */}
       <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
-      <main>
+      <main
+        style={{
+          minHeight: '800px',
+        }}
+      >
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/product/:id" component={ProductPage} />
-          <Route exact path="/cart" component={CartPage} />
-          <Route exact path="/promotion" component={PromotionPage} />
-          <Route exact path="/promotion/:id" component={PromotionDetailPage} />
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/product/:id' component={ProductPage} />
+          <Route exact path='/cart' component={CartPage} />
+          <Route exact path='/promotion' component={PromotionPage} />
+          <Route exact path='/promotion/:id' component={PromotionDetailPage} />
         </Switch>
       </main>
+      {/* Footer */}
+      <Footer />
     </Router>
   );
 }
