@@ -1,0 +1,26 @@
+.promotionDetailPage {
+  .promotionDetailPage__content {
+    position: relative;
+    top: -40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: white;
+    padding: 20px 20px 20px 20px;
+    min-height: 400px;
+    .promotionDetailPage__title {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .promotionDetailPage__time {
+      font-size: 1rem;
+      font-weight: bold;
+      color: rgb(95, 95, 95);
+      margin: 10px 0px;
+    }
+    .promotionDetailPage__description {
+      font-size: 1.5rem;
+    }
+  }
+}

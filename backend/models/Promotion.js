@@ -17,6 +17,10 @@ const promotionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  imgUrl: {
+    type: String,
+    required: true,
+  },
 });
 
 const Promotion = mongoose.model('promotion', promotionSchema);

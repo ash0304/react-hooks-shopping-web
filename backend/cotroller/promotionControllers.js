@@ -13,7 +13,7 @@ const getAllPromotions = async (req, res) => {
 
 const getPromotionById = async (req, res) => {
   try {
-    const promotion = await Promotion.finById(req.params.id);
+    const promotion = await Promotion.findById(req.params.id);
     res.json(promotion);
   } catch (error) {
     console.error(error);

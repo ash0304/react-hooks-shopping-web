@@ -1,9 +1,11 @@
 .carousel__container {
-  min-height: 400px;
-  .slick-slide {
-    min-height: 400px;
-  }
+  width: 100%;
   .slick-dots {
-    bottom: 0;
+    bottom: 10px;
+  }
+  .carousel__slide {
+    position: relative;
+    height: 500px;
+    background: rgb(95, 95, 95);
   }
 }

@@ -15,14 +15,6 @@ const HomePage = () => {
   const getProducts = useSelector((state) => state.getProducts);
   const { products, loading, error } = getProducts;
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);

@@ -53,6 +53,12 @@ const Navbar = ({ click }) => {
           </button>
         </li>
         <li>
+          <Link to='/'>Shop</Link>
+        </li>
+        <li>
+          <Link to='/promotion'>Promotion</Link>
+        </li>
+        <li>
           <Link to='/cart' className='cart__link'>
             {/* Icon */}
             <i className='fas fa-shopping-cart'></i>
@@ -61,9 +67,6 @@ const Navbar = ({ click }) => {
               <span className='cartlogo__badge'>{getCartCount()}</span>
             </span>
           </Link>
-        </li>
-        <li>
-          <Link to='/'>Shop</Link>
         </li>
       </ul>
 

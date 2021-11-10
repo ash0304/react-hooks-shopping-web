@@ -8,12 +8,18 @@ import {
   getProductsReducer,
   getProductDetailsReducer,
 } from './reducers/productReducers';
+import {
+  getPromotionsReducer,
+  getPromotionDetailReducer
+} from './reducers/promotionReducers';
 
 // reducer
 const reducer = combineReducers({
   cart: cartReducer,
   getProducts: getProductsReducer,
   getProductDetails: getProductDetailsReducer,
+  getPromotions: getPromotionsReducer,
+  getPromotionDetails: getPromotionDetailReducer,
 });
 
 // middleware

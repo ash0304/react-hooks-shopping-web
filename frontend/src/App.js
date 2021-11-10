@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import CartPage from './pages/CartPage';
+import PromotionPage from './pages/PromotionPage';
+import PromotionDetailPage from './pages/PromotionDetailPage';
 
 // Components
 import Navbar from './components/Navbar';
@@ -28,6 +30,8 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/product/:id" component={ProductPage} />
           <Route exact path="/cart" component={CartPage} />
+          <Route exact path="/promotion" component={PromotionPage} />
+          <Route exact path="/promotion/:id" component={PromotionDetailPage} />
         </Switch>
       </main>
     </Router>
