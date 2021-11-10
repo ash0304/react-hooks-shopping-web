@@ -15,17 +15,6 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-.carousel__containter {
-  min-height: 400px;
-  .slick-slide {
-    min-height: 400px;
-    // background: black;
-    color: white;
-  }
-  .slick-dots {
-    bottom: 0;
-  }
-}
 
 @media (max-width: 1232px) {
   .homepage__products {

@@ -1,10 +1,10 @@
 import './HomePage.scss';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Slider from 'react-slick';
 
 // Components
 import Product from '../components/Product';
+import Carousel from '../components/Carousel';
 
 // Actions
 import { getProducts as listProducts } from '../redux/actions/productActions';
@@ -29,26 +29,8 @@ const HomePage = () => {
 
   return (
     <div className='homepage'>
-      <Slider {...settings} className='carousel__containter'>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
+      {/* Carousel Component */}
+      <Carousel />
       <h2 className='homepage__title'>Latest Products</h2>
       <div className='homepage__products'>
         {loading ? (

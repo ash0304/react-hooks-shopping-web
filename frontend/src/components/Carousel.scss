@@ -1,0 +1,9 @@
+.carousel__container {
+  min-height: 400px;
+  .slick-slide {
+    min-height: 400px;
+  }
+  .slick-dots {
+    bottom: 0;
+  }
+}
