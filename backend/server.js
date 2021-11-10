@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const connectDB = require('./config/db');
 const productRoutes = require('./routes/productRoutes');
+const promotionRoutes = require('./routes/promotionRoutes');
 
 connectDB();
 
@@ -13,6 +14,8 @@ app.use(express.json());
 
 // get products from routes
 app.use('/api/products', productRoutes);
+// get promotions from routes
+app.use('/api/promotions', promotionRoutes);
 
 // link with heroku when NODE_ENV is production
 if (process.env.NODE_ENV === 'production') {
