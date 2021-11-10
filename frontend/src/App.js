@@ -14,6 +14,7 @@ import Navbar from './components/Navbar';
 import Backdrop from './components/Backdrop';
 import SideDrawer from './components/SideDrawer';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
@@ -31,13 +32,19 @@ function App() {
           minHeight: '800px',
         }}
       >
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/product/:id' component={ProductPage} />
-          <Route exact path='/cart' component={CartPage} />
-          <Route exact path='/promotion' component={PromotionPage} />
-          <Route exact path='/promotion/:id' component={PromotionDetailPage} />
-        </Switch>
+        <ScrollToTop>
+          <Switch>
+            <Route exact path='/' component={HomePage} />
+            <Route exact path='/product/:id' component={ProductPage} />
+            <Route exact path='/cart' component={CartPage} />
+            <Route exact path='/promotion' component={PromotionPage} />
+            <Route
+              exact
+              path='/promotion/:id'
+              component={PromotionDetailPage}
+            />
+          </Switch>
+        </ScrollToTop>
       </main>
       {/* Footer */}
       <Footer />

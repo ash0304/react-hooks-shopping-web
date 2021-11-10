@@ -1,4 +1,3 @@
-import { useParams } from 'react-router';
 import './PromotionDetailPage.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
@@ -6,9 +5,9 @@ import { useEffect } from 'react';
 // Actions
 import { getPromotionDetails } from '../redux/actions/promotionActions';
 
-const PromotionDetailPage = () => {
+const PromotionDetailPage = ({ match }) => {
   // params
-  const { id } = useParams();
+  const id = match ? match.params.id : null;
   // dispatch
   const dispatch = useDispatch();
 
@@ -16,7 +15,7 @@ const PromotionDetailPage = () => {
   const { promotion, error, loading } = promotionDetails;
 
   useEffect(() => {
-    if (promotion && id !== promotion._id) {
+    if (promotion && id !== promotion._id && id) {
       dispatch(getPromotionDetails(id));
     }
   }, [dispatch, promotion, id]);
@@ -40,9 +39,11 @@ const PromotionDetailPage = () => {
             }}
           ></div>
           <div className='promotionDetailPage__content'>
-            <div className="promotionDetailPage__title">{promotion.title}</div>
-            <div className="promotionDetailPage__time">{`${promotion.startDate} ~ ${promotion.endDate}`}</div>
-            <div className="promotionDetailPage__description">{promotion.description}</div>
+            <div className='promotionDetailPage__title'>{promotion.title}</div>
+            <div className='promotionDetailPage__time'>{`${promotion.startDate} ~ ${promotion.endDate}`}</div>
+            <div className='promotionDetailPage__description'>
+              {promotion.description}
+            </div>
           </div>
         </>
       )}
